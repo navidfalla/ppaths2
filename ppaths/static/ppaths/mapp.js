@@ -184,54 +184,13 @@ function drawPath(floor){
               .attr("stroke-dashoffset", 0);
 };
 
-function drawPathFirst (){
+function drawPath (){
   drawDefs("firstFloor");
-  drawPath("firstFloor");
-};
-
-function drawPathSecond (){
   drawDefs("secondFloor");
-  drawPath("secondFloor");
-};
-
-function drawPathBase (){
   drawDefs("basementFloor");
+  drawPath("firstFloor");
+  drawPath("secondFloor");
   drawPath("basementFloor");
-//
-//   //draw series of lines using a json file of roomIds + stylize + animate
-// var floorArray = []
-// $(path.basementFloor).each(function(i, val){
-//   var roomIdPath = path.basementFloor[i]
-//   //console.log(roomIdPath);
-//   var points = d3.select('#'+roomIdPath).attr('points').split(",");
-//   var midX = (Number(points[0]) + Number(points[6])) / 2;
-//   var midY = (Number(points[1]) + Number(points[3])) / 2;
-//   floorArray.push({"x": midX, "y": midY});
-// });
-// console.log(floorArray);
-// var lineFunction = d3.line()
-//                       .x(function(d) { return d.x; })
-//                       .y(function(d) { return d.y; });
-// d3.selectAll('#basePath').remove();
-// //var gContainer = svgParent.append("g");
-// var lineGraph = d3.select("#basementFloor").append("path")
-//                                         .attr("class", "path")
-//                                         .attr("id" , "basePath")
-//                                         .attr("d", lineFunction(floorArray))
-//                                         .attr("stroke", "#191970")
-//                                         .attr("stroke-width", 3)
-//                                         .attr("fill", "none")
-//                                         .attr("marker-start", "url(#basementFloorSquare)")
-//                                         .attr("marker-mid", "url(#basementFloorSquare)")
-//                                         .attr("marker-end", "url(#basementFloorArrowhead)")
-//                                         .attr("stroke-linecap","round")
-//
-// var totalLength = lineGraph.node().getTotalLength();
-// lineGraph.attr("stroke-dasharray", totalLength + " " + totalLength)
-//          .attr("stroke-dashoffset", totalLength)
-//          .transition()
-//             .duration(2500)
-//             .attr("stroke-dashoffset", 0);
 };
 
 var badGuys = [];
