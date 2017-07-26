@@ -1,0 +1,14 @@
+[
+  "roomA1",
+  "roomA6",
+  "roomA5",
+  "roomA2",
+  "roomA3",
+  "roomA4",
+  "roomA10"
+]
+
+/*{
+  "floor1": ["roomA1", "roomA6", "roomA5", "roomA2", "roomA3", "roomA4", "roomA10"],
+  "floor2": ["roomB4", "roomB5"]
+}*/

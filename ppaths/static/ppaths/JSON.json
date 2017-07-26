@@ -1,0 +1,10 @@
+{
+  "badGuys": ["roomA1", "roomC1", "roomB4", "roomA2", "roomA3"],
+  "path":
+    {
+      "firstFloor": ["roomA1", "roomA6", "roomA5", "roomA2", "roomA3", "roomA4", "roomA10"],
+      "secondFloor": ["roomB4", "roomB5", "roomB6"],
+      "basementFloor": []
+    },
+  "attacker": true
+}

@@ -1,0 +1,84 @@
+<!-- {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'ppaths/style.css' %}" />
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+      <li><a href="{% url 'ppaths:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No ppaths are available.</p>
+{% endif %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'ppaths/global.css' %}" />
+  </head>
+  <body id="firstPage">
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1">
+          <img src="{% static 'ppaths/images/bob.jpg' %}" alt="Bob" class="img-fluid" id="avatar">
+        </div>
+        <div class="col-md-11">
+          <p id="question" class="lead">
+            This person is marked as suspicious until you determine otherwise. Please observe his/her actions closely.<br>
+            <span id="smallText">Regardless of your observations, you should update his/her location on the map, and determine a safe destination (or exit) as soon as possible.</span>
+          </p>
+          <div class="btn-group" data-toggle="buttons">
+            <label id="attackerButton" class="btn btn-danger active">
+              <input type="radio" name="options" autocomplete="off"> Suspicious
+            </label>
+            <label id="civilianButton" class="btn btn-success">
+              <input type="radio" name="options" autocomplete="off"> Not Suspicious
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <img src="{% static 'ppaths/images/dome.jpg' %}" alt="Camera" class="img-fluid">
+        </div>
+
+        <div class="col-md-7">
+          <div id="map">
+          <!--img src="images/firstFloor.PNG" alt="First Floor" class="img-fluid" style="border: 1px solid #ccc;"-->
+          </div>
+
+          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <p>Floor Level&nbsp;</p>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" id="basementFloorBtn" class="btn btn-secondary">-1</button>
+              <button type="button" id="firstFloorBtn" class="btn btn-secondary">1</button>
+              <button type="button" id="secondFloorBtn" class="btn btn-secondary">2</button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+    <script type="text/javascript" src="/static/ppaths/mapp.js"></script>
+  </body>
+</html>
